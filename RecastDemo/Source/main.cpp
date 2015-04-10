@@ -66,7 +66,7 @@ int main(int /*argc*/, char** /*argv*/)
 	// Init SDL
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 	{
-		printf("Could not initialise SDL\n");
+		printf("Could not initialise SDL: %s\n", SDL_GetError());
 		return -1;
 	}
 	
@@ -109,7 +109,7 @@ int main(int /*argc*/, char** /*argv*/)
 	
 	if (!screen)
 	{
-		printf("Could not initialise SDL opengl\n");
+		printf("Could not initialise SDL opengl: %s\n", SDL_GetError());
 		return -1;
 	}
 
